@@ -127,6 +127,10 @@ gehua,ghl-r-001|\
 jcg,y2)
 	ucidef_set_led_switch "internet" "Internet" "blue:internet" "switch0" "0x10"
 	;;
+zte,e8820s|\
+zte,e8820v2)
+	ucidef_set_led_switch "internet" "Internet" "blue:internet" "switch0" "0x10"
+	;;
 gnubee,gb-pc2)
 	ucidef_set_led_netdev "ethyellow" "ethyellow" "orange:ethyellow" "ethyellow" "link tx rx"
 	;;
