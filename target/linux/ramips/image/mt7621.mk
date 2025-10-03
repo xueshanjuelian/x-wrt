@@ -4189,7 +4189,7 @@ endef
 TARGET_DEVICES += zyxel_wap6805
 
 define Device/zte_e8820s
-  IMAGE_SIZE := 65216k
+  IMAGE_SIZE := 32448k
   DEVICE_VENDOR := ZTE
   DEVICE_MODEL := e8820s
   DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 kmod-usb3 \
