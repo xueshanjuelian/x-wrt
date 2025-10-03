@@ -64,9 +64,7 @@
 	flash@0 {
 		compatible = "jedec,spi-nor";
 		reg = <0>;
-		spi-max-frequency = <50000000>;
-		broken-flash-reset;
-		m25p,fast-read;
+		spi-max-frequency = <25000000>;
 
 		partitions {
 			compatible = "fixed-partitions";
@@ -85,30 +83,10 @@
 				read-only;
 			};
 
-			partition@40000 {
+			factory: partition@40000 {
 				label = "factory";
 				reg = <0x40000 0x10000>;
 				read-only;
-
-				nvmem-layout {
-					compatible = "fixed-layout";
-					#address-cells = <1>;
-					#size-cells = <1>;
-
-					eeprom_factory_0: eeprom@0 {
-						reg = <0x0 0x400>;
-					};
-
-					eeprom_factory_8000: eeprom@8000 {
-						reg = <0x8000 0x200>;
-					};
-
-					macaddr_factory_e000: macaddr@e000 {
-						compatible = "mac-base";
-						reg = <0xe000 0x6>;
-						#nvmem-cell-cells = <1>;
-					};
-				};
 			};
 
 			partition@50000 {
